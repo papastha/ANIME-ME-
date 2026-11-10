@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+        <title>One Piece Poster</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            body {
+                background-image: url(../images/onepieceid.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+            }
+            .op-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                font-family: 'Rye';
+            }
+        </style>
+    </head>
+    <body>
+        <div class="op-wrapper">
+            <h1>WANTED!</h1>
+            <canvas id="poster" width="400" height="560"></canvas>
+            <div class="controls">
+                <label>YOUR NAME</label>
+                <input type="text" id="nameInput" placeholder="Monkey D. Luffy" maxlength="24">
+
+                <label>BOUNTY (BERRIES)</label>
+                <input type="text" id="bountyInput" placeholder="3,000,000,000" maxlength="20">
+
+                <div class="btn-row">
+                    <button class="op-btn primary" onclick="drawPoster()">GENERATE</button>
+                    <button class="op-btn secondary" onclick="downloadPoster()">DOWNLOAD</button>
+                </div>
+
+                <a href="templates.html" class="op-btn primary" style="margin-top: 4px; text-align: center;"><- BACK</a>
+            </div>
+        </div>
+    </body>
+</html>
