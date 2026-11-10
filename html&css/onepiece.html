@@ -19,6 +19,34 @@
                 gap: 20px;
                 font-family: 'Rye';
             }
+            canvas {
+                border: 6px solid #1a1a1a;
+                box-shadow: 8px 8px 0px #1a1a1a;
+                cursor: pointer;
+            }
+            .controls {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+                width: 100%;
+                max-width: 400px;
+            }
+            .controls input[type="text"] {
+                width: 100%;
+                padding: 10px 14px;
+                font-family: 'Rye';
+                font-size: 16px;
+                border: 3px solid #1a1a1a;
+                background: rgba(255,255,255,0.85);
+                outline: none;
+            }
+            .controls label {
+                font-size: 14px;
+                font-family: font;
+                align-self: flex-start;
+                margin-bottom: -6px;
+            }
         </style>
     </head>
     <body>
@@ -31,6 +59,9 @@
 
                 <label>BOUNTY (BERRIES)</label>
                 <input type="text" id="bountyInput" placeholder="3,000,000,000" maxlength="20">
+
+                <p class="upload-hint">Click the poster to upload your photo</p>
+                <input type="file" id="photInput" accept="image/*" style="display:none";
 
                 <div class="btn-row">
                     <button class="op-btn primary" onclick="drawPoster()">GENERATE</button>
